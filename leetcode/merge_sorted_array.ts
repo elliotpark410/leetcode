@@ -73,3 +73,33 @@ merge(nums1, m, nums2, n);
 console.log(nums1); // Output: [1,2,2,3,5,6]
 
 
+// visual
+/*
+Initial state:
+nums1: [1, 2, 3, 0, 0, 0]  (m = 3)
+nums2: [2, 5, 6]            (n = 3)
+
+Step 1:
+nums1: [1, 2, 3, 0, 0, 6]  (m = 3)
+nums2: [2, 5, 6]            (n = 2)
+           ^                 ^
+       index1            indexMerged
+                    index2
+
+Step 2:
+nums1: [1, 2, 3, 0, 5, 6]  (m = 3)
+nums2: [2, 5, 6]            (n = 1)
+           ^              ^
+       index1         indexMerged
+                    index2
+
+Step 3:
+nums1: [1, 2, 3, 3, 5, 6]  (m = 3)
+nums2: [2, 5, 6]            (n = 0)
+        ^              ^
+    index1         indexMerged
+                    index2
+
+Final state:
+nums1: [1, 2, 2, 3, 5, 6]   (merged array)
+*/
